@@ -4,9 +4,7 @@
 
 Tool for tracking/killing BigQuery jobs, i.e. JobTracker for BigQuery, runs on AppEngine.
 
-
 ![Jobs](meta.png)
-
 
 ## Run Locally,
 
@@ -31,10 +29,10 @@ $ gcloud app deploy --version flip --project <PROJECT>
 ### Install the Go dependencies:
 
 ```
-$ go get github.com/sojern/baqman
-$ cd $GOPATH/src/github.com/sojern/baqman
-$ go get -u github.com/golang/dep/cmd/dep
-$ dep ensure
+$ git clone git@github.com:sojern/baqman
+$ go mod download
+## make changes
+$ go mod tidy
 ```
 
 ### Run the Tests
@@ -43,3 +41,4 @@ $ dep ensure
 $ go test ./...
 ok    github.com/sojern/baqman   0.012s
 ...
+```
